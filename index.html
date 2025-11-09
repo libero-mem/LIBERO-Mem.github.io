@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html>
+<style>
+  table.libero {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    font-size: 14px;
+    color: #222;
+    background-color: #fafafa;
+  }
+
+  table.libero thead {
+    background-color: #e8f0fe;
+    border-bottom: 2px solid #b6c9ff;
+  }
+
+  table.libero th, table.libero td {
+    text-align: left;
+    padding: 10px 12px;
+    vertical-align: top;
+  }
+
+  table.libero th {
+    font-weight: 600;
+    color: #1a237e;
+    letter-spacing: 0.02em;
+  }
+
+  table.libero tbody tr:nth-child(odd) {
+    background-color: #fdfdfd;
+  }
+
+  table.libero tbody tr:nth-child(even) {
+    background-color: #f3f6fc;
+  }
+
+  table.libero tbody tr:hover {
+    background-color: #e1ebff;
+    transition: background-color 0.2s ease;
+  }
+
+  table.libero td {
+    border-bottom: 1px solid #ddd;
+  }
+
+  table.libero td br {
+    line-height: 1.4;
+  }
+</style>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Rethinking Progression of Memory State in Robotic Manipulation: An Object-Centric Perspective">
+  <meta name="keywords" content="embodied AI, benchmark, object-centric learning, robot manipulation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:image" content="./static/images/liberomem.png"/>
+  <link rel="image_src" href="./static/images/liberomem.png">
+  <link rel="icon"
+        type="image/x-icon"
+        href="./static/images/liberomem.ico"/>
+
+  <title>Rethinking Progression of Memory State in Robotic Manipulation: An Object-Centric Perspective</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EDF010G6PN"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EDF010G6PN');
+
+
+  </script>
+
+  <script type="module"
+          src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script src="https://unpkg.com/interactjs/dist/interact.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="./static/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="./static/slick/slick-theme.css"/>
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container">
+      <div class="container has-text-centered">
+        <h1 class="title is-1 publication-title">
+          Rethinking Progression of Memory State in Robotic Manipulation: An Object-Centric Perspective
+        </h1>
+        
+        <div class="column is-full_width">
+          <h2 class="title is-4">In Review 2025</h2>
+        </div>
+        <!-- <br> -->
+        <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=LZb_-BwAAAAJ">Nhat Chung</a><sup>*,1</sup></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=mJuHh7UAAAAJ">Taisei Hanyu</a><sup>*,2</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+            <span class="author-block">
+            <a href="https://scholar.google.com/citations?user=PhqGEY8AAAAJ">Toan Nguyen</a><sup>1</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+            <span class="author-block">
+            <a href="https://scholar.google.com/citations?user=nsoYvw8AAAAJ">Huy Le</a><sup>1</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+            <br>
+            </span>
+            <span class="author-block">
+            <a href="https://uark-aicv.github.io/team/frederick_bumgarner.html">Frederick Bumgarner</a><sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+            </span>
+            <span class="author-block">
+            <a href="https://scholar.google.com/citations?user=_NIyeykAAAAJ">Duy Nguyen Ho Minh</a><sup>3,7,8</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+            </span>
+            <span class="author-block">
+            <a href="https://scholar.google.com/citations?user=Iyvx8vcAAAAJ">Khoa Vo</a><sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+            </span>
+            <span class="author-block">
+            <a href="https://scholar.google.com/citations?user=TF2LRvMAAAAJ">Kashu Yamazaki</a><sup>4</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+          <br>
+          <span class="author-block">
+            <a href="https://scholar.google.com/citations?user=jGiFLP8AAAAJ">Chase Rainwater</a><sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </span>
+          <span class="author-block">
+            <a href="https://scholar.google.com/citations?user=9luXdEIAAAAJ">Tung Kieu</a><sup>5</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </span>
+          <span class="author-block">
+            <a href="https://scholar.google.com/citations?user=gEbaF0sAAAAJ">Anh Nguyen</a><sup>6</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </span>
+          <span class="author-block">
+            <a href="https://scholar.google.com/citations?user=8ck0k_UAAAAJ">Ngan Le</a><sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </span>
+        </div>
+        <br>
+        <div class="is-size-5 publication-authors">
+          <span class="author-block"><sup>*</sup>Equal contributions</span>&nbsp;&nbsp;<br>
+          <span class="author-block"><sup>1</sup>FPT Software AI Center</span>&nbsp;&nbsp;
+          <span class="author-block"><sup>2</sup>University of Arkansas</span>&nbsp;&nbsp;<br>
+          <span class="author-block"><sup>3</sup>University of Stuttgart</span>&nbsp;&nbsp;
+          <span class="author-block"><sup>4</sup>Carnegie Mellon University</span>&nbsp;&nbsp;<br>
+          <span class="author-block"><sup>5</sup>Aalborg University</span>&nbsp;&nbsp;
+          <span class="author-block"><sup>6</sup>University of Liverpool</span>&nbsp;&nbsp;<br>
+          <span class="author-block"><sup>7</sup>German Research Center for Artificial Intelligence (DFKI)</span>&nbsp;&nbsp;<br>
+          <span class="author-block"><sup>8</sup>Max Planck Research School for Intelligent Systems (IMPRS-IS)</span>&nbsp;&nbsp;
+        </div>
+        
+        <div class="column has-text-centered">
+          <div class="publication-links">
+            <span class="link-block">
+                <a href="" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+            <span class="link-block">
+                <a href="" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+            </span>
+            <span class="link-block">
+              <a href=""
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <i class="fab fa-github"></i>
+                </span>
+                <span>Code</span>
+                </a>
+            </span>
+            <!-- Dataset Link. -->
+            <span class="link-block">
+              <a href=""
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <i class="far fa-images"></i>
+                </span>
+                <span>Data</span>
+                </a>
+              </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div id="wrapper"> 
+	<div style="max-width: 1200px; margin: 0 auto;">
+  	<img
+    		src="./static/images/liberomem.png"
+    		alt="Scene overview"
+    		style="width: 100%; height: auto; display: block; object-fit: cover;"
+  	/>
+	</div>
+        <div class="clear"></div> 
+      </div>
+      <h2 class="subtitle has-text-centered">
+        <br><i>LIBERO-Mem</i>, a non-Markovian task suite for stress-testing robotic manipulation under object-level partial observability. It combines short- and long-horizon object tracking with temporally sequenced subgoals, requiring reasoning beyond the current frame.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+<p style="font-family: 'Segoe UI', Roboto, Arial, sans-serif; line-height: 1.6; color: #222; font-size: 18px;">
+As embodied agents operate in increasingly complex environments, the ability to perceive, track, and reason about individual object instances over time becomes essential, especially in tasks requiring sequenced interactions with visually similar objects. In these non-Markovian settings, key decision cues are often hidden in object-specific histories rather than the current scene. Without persistent memory of prior interactions, such as what has been interacted with, where it has been, or how it has changed, visuomotor policies may fail, repeat past actions, or overlook completed ones. To surface this challenge, we introduce <strong style="color:#1a3cff;">LIBERO-Mem</strong>, a non-Markovian task suite for stress-testing robotic manipulation under object-level partial observability. It combines short- and long-horizon object tracking with temporally sequenced subgoals, requiring reasoning beyond the current frame. However, naïve vision-language-action (VLA) models struggle in such settings, with token scaling quickly becoming intractable-even for tasks spanning just a few hundred frames. We propose <em style="color:#007b83;">Embodied-SlotSSM</em>, a slot-centric VLA framework built for temporal scalability. It maintains spatio-temporally consistent slot identities and leverages them through two mechanisms: (1) slot-state-space modeling for reconstructing short-term history, and (2) a relational encoder to align the input tokens with action decoding. Together, these components enable temporally grounded, context-aware action prediction. Experiments show <em style="color:#007b83;">Embodied-SlotSSM</em>'s baseline performance on <strong style="color:#1a3cff;">LIBERO-Mem</strong> and general benchmarks, offering a scalable solution for non-Markovian reasoning in object-centric robotic policies.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+
+<section class="hero teaser">
+  <div class="hero-body">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Key Contributions</h2>
+      </div>
+    </div>
+    <div class="container is-max-desktop">
+      <div class="content has-text-justified">
+        <p>
+          <strong style="color:#1a3cff;">LIBERO-Mem</strong> consists of 10 tasks spanning four object-centric memory dimensions: Object Motion (OM), Object Sequence (OS), Object Relations (OR), and Object Occlusion (OO). Each task presents temporal dependencies and ambiguity requiring structured memory beyond instantaneous observations. 
+        </p>
+      </div>
+
+        <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
+  <img 
+    src="./static/images/liberonovelty.png"
+    alt="Novelty of LIBERO"
+    style="width: 60%; height: auto; display: inline-block; object-fit: cover;"
+  />
+</div>
+
+<div><p>
+<strong>Short- and long-horizon data collection process.</strong>
+  Expert demonstrations are collected via smooth keyboard control with multi-key tracking. 
+  Each task contains 200–700 frames, supporting both short- and long-horizon evaluation. 
+  Each task is collected to 120 trajectories, where 100 are refined as training data, and 20 are left for validation.
+  <strong>Subgoal-aware evaluation.</strong>
+  Each task is decomposed into symbolic subgoals using Sequence (→) and Or (∨) operators for fine-grained evaluation.
+  <strong>Object identity ambiguities.</strong>
+  Visually identical bowls and plates differ only in asset ID, requiring agents to resolve object identity from temporal interaction history. 
+  <strong>Object &amp; subgoal annotations.</strong>
+  Each timestep includes object instance IDs, masks, and subgoal completion flags per object.
+</p></div>
+
+      <div>
+<table class="libero">
+  <thead>
+    <tr>
+      <th style="width:8%;">Task</th>
+      <th style="width:49%;">Task Description</th>
+      <th style="width:30%;">Subtask Goals</th>
+      <th style="width:13%;">Types</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Task 1</td>
+      <td>robot to pick up the bowl and place it back on the plate</td>
+      <td>bowl lifted → bowl on plate</td>
+      <td>OM</td>
+    </tr>
+    <tr>
+      <td>Task 2</td>
+      <td>robot to lift the bottle and put it down on the plate</td>
+      <td>bottle lifted → bottle on plate</td>
+      <td>OM</td>
+    </tr>
+    <tr>
+      <td>Task 3</td>
+      <td>robot to lift the bowl and place it back on the plate 3 times</td>
+      <td>[bowl lifted → bowl on plate] × 3</td>
+      <td>OM, OS</td>
+    </tr>
+    <tr>
+      <td>Task 4</td>
+      <td>robot to pick up the bottle and put it down on the plate 3 times</td>
+      <td>[bottle lifted → bottle on plate] × 3</td>
+      <td>OM, OS</td>
+    </tr>
+    <tr>
+      <td>Task 5</td>
+      <td>robot to lift the bowl and place it back on the plate 5 times</td>
+      <td>[bowl lifted → bowl on plate] × 5</td>
+      <td>OM, OS</td>
+    </tr>
+    <tr>
+      <td>Task 6</td>
+      <td>robot to pick up the bowl and put it on the plate 7 times</td>
+      <td>[bowl lifted → bowl on plate] × 7</td>
+      <td>OM, OS</td>
+    </tr>
+    <tr>
+      <td>Task 7</td>
+      <td>robot to swap 2 bowls on their plates using the rotation rule</td>
+      <td>
+        bowl 1 on plate 3 →<br>
+        bowl 2 on plate 1 →<br>
+        bowl 1 on plate 2
+      </td>
+      <td>OM, OR</td>
+    </tr>
+    <tr>
+      <td>Task 8</td>
+      <td>robot to swap 3 bowls on their plates using the rotation rule</td>
+      <td>
+        bowl 1 on plate 4 →<br>
+        bowl 2 on plate 1 →<br>
+        bowl 3 on plate 2 →<br>
+        bowl 1 on plate 3
+      </td>
+      <td>OM, OR</td>
+    </tr>
+    <tr>
+      <td>Task 9</td>
+      <td>robot to put bowl in closest basket and move basket to the middle</td>
+      <td>bowl 1 in basket 1 → basket 1 in center</td>
+      <td>OM, OO</td>
+    </tr>
+    <tr>
+      <td>Task 10</td>
+      <td>robot to put bowl in closest basket and move empty basket to middle</td>
+      <td>bowl 1 in basket 1 → basket 2 in center</td>
+      <td>OM, OO</td>
+    </tr>
+  </tbody>
+</table>
+      </div>
+      <div class="content has-text-justified"><br>
+
+      </div>
+      <div class="content has-text-justified">
+        <p>
+          <em style="color:#007b83;">Embodied-SlotSSM</em> a slot-based state-space modeling framework that encodes persistent, object-centric memory representations, enabling structured tracking and decision-making under partial observability.
+        </p>
+      </div>
+        <div style="max-width: 1200px; margin: 0 auto;">
+  	<img
+    		src="./static/images/embodiedssm.png"
+    		alt="Embodied-SlotSSM"
+    		style="width: 100%; height: auto; display: block; object-fit: cover;"
+  	/>
+	</div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="hero-body">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Visualizations</h2>
+      </div>
+    </div>
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <video id="teaser" autoplay controls muted loop playsinline width="50%" height="100%">
+          <source src="./static/images/_.mp4"
+                  type="video/mp4">
+        </video>
+      </div>
+      <div class="content has-text-justified">
+        <p>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="acknowledgements">
+  <div class="container content is-max-desktop">
+    <h2 class="title">Acknowledgements</h2>
+    <p>We borrow github page from <a href="https://habicrowd.github.io/">HabiCrowd</a> and <a href="https://hypernerf.github.io/">HyperNeRF</a>. Special thanks to them!
+  </div>
+</section>
+
+<script type="text/javascript" src="./static/slick/slick.min.js"></script>
+</body>
+</html>
